@@ -2,12 +2,10 @@
   (:require
    [reagent.core :as reagent]
    [re-frame.core :as re-frame]
+   [clarice.ui.layout :as ui]
    [clarice.events :as events]
    [clarice.routes :as routes]
-   [clarice.views :as views]
-   [clarice.config :as config]
-   ))
-
+   [clarice.config :as config]))
 
 (defn dev-setup []
   (when config/debug?
@@ -16,7 +14,7 @@
 
 (defn mount-root []
   (re-frame/clear-subscription-cache!)
-  (reagent/render [views/main-panel]
+  (reagent/render [ui/render]
                   (.getElementById js/document "app")))
 
 (defn ^:export init []
