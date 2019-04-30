@@ -57,7 +57,7 @@
                                        :class       "podcasts"
                                        :icon        "fas fa-microphone-alt"
                                        :href        "/#/podcasts"
-                                       :panel       :showcase-panel}
+                                       :panel       :podcasts-panel}
 
                                       {:react       "7"
                                        :title       "Publishing"
@@ -65,7 +65,7 @@
                                        :class       "publishing"
                                        :icon        "fas fa-book"
                                        :href        "/#/publishing"
-                                       :panel       :publishing}
+                                       :panel       :publishing-panel}
 
                                       {:react       "8"
                                        :title       "Public Speaking"

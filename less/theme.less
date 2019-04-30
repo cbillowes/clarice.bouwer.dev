@@ -1,0 +1,131 @@
+@serif: 'Crimson Text', 'Times New Roman', serif;
+@sans-serif: Open Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
+@bold: 800;
+@dark: #181c1f;
+@dim: lighten(@dark, 20%);
+@light: #bfcbd2;
+@bright: lighten(@light, 10%);
+@accent: #9a9c16;
+@mask: #097acf;
+
+@color-welcome: #c8c8c8;
+@color-about: #99C7FF;
+@color-showcase: #F0CCD1;
+@color-technologies: #E88BBF;
+@color-qualifications: #EBB15C;
+@color-career: #81FF81;
+@color-podcasts: #EB5D5D;
+@color-publishing: #8BE3E8;
+@color-public-speaking: #E4FF82;
+@color-blogs: #EB775E;
+@color-projects: #5EA1EB;
+@color-community: #C6F55A;
+@color-contact: #CC0000;
+@color-print: #FFFA91;
+
+.nav-link(@color, @color-hover) {
+  & {
+    background-color: @dark;
+
+    .nav-link {
+      color: @light;
+
+      &:hover {
+        color: @color;
+      }
+    }
+  }
+
+  &.active, &.show {
+    background-color: @color;
+
+    &:hover {
+      background-color: @color-hover;
+    }
+
+    .nav-link {
+      font-weight: @bold;
+      color: @dark;
+    }
+  }
+}
+
+.dropdown-menu(@color) {
+  .dropdown {
+    .dropdown-menu {
+      background-color: white;
+      border: solid 1px @dark;
+
+      .dropdown-item {
+        color: @light !important;
+        background-color: @dark;
+      }
+    }
+  }
+}
+
+.dropdown-item(@color) {
+  border: solid 1px @dark;
+  outline: solid 1px @dark;
+  background-color: @dark;
+  span {
+    color: @light;
+  }
+
+  &:hover {
+    border: solid 1px @color;
+    outline: solid 1px @color;
+    background-color: @color;
+    span {
+      color: @dark;
+    }
+  }
+
+  &.active {
+    font-weight: bold;
+    border: solid 1px @color;
+    outline: solid 1px @color;
+    background-color: @color;
+    span {
+      color: @dark;
+    }
+
+    &:hover {
+      border: solid 1px @dark;
+      outline: solid 1px @dark;
+      background-color: @dark;
+
+      span {
+        color: @color;
+      }
+    }
+  }
+}
+
+.quick-nav(@color, @top, @left) {
+  &:hover {
+    border-color: @color;
+
+    i {
+      color: @color;
+    }
+  }
+
+  &.active {
+    background-color: @color;
+    border-color: @bright;
+
+    i {
+      color: @bright;
+    }
+
+    &:hover {
+      background-color: @dark;
+    }
+  }
+
+  i {
+    top: @top;
+    left: @left;
+  }
+}

@@ -1,0 +1,16 @@
+@import "../theme";
+
+@color-about-hover: darken(@color-about, 20%);
+#navigation {
+  .navbar {
+    .nav-item.about {
+      .nav-link(@color-about, @color-about-hover);
+    }
+  }
+
+  .quick-nav {
+    li.about {
+      .quick-nav(@color-about, 20%, 25%);
+    }
+  }
+}

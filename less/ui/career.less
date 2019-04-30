@@ -1,0 +1,16 @@
+@import "../theme";
+
+@color-career-hover: darken(@color-career, 20%);
+#navigation {
+  .navbar {
+    .nav-item.career {
+      .nav-link(@color-career, @color-career-hover);
+    }
+  }
+
+  .quick-nav {
+    li.career {
+      .quick-nav(@color-career, 20%, 16%);
+    }
+  }
+}

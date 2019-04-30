@@ -1,0 +1,16 @@
+@import "../theme";
+
+@color-contact-hover: lighten(@color-contact, 20%);
+#navigation {
+  .navbar {
+    .nav-item.contact {
+      .nav-link(@color-contact, @color-contact-hover);
+    }
+  }
+
+  .quick-nav {
+    li.contact {
+      .quick-nav(@color-contact, 20%, 20%);
+    }
+  }
+}

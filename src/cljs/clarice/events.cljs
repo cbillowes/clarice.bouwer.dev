@@ -2,8 +2,8 @@
   (:require
    [re-frame.core :as re-frame]
    [clarice.db :as db]
-   [day8.re-frame.tracing :refer-macros [fn-traced defn-traced]]
-   ))
+   [day8.re-frame.tracing :refer-macros [fn-traced defn-traced]]))
+
 
 (re-frame/reg-event-db
  ::initialize-db
@@ -14,3 +14,8 @@
  ::set-active-panel
  (fn-traced [db [_ active-panel]]
    (assoc db :active-panel active-panel)))
+
+(re-frame/reg-event-fx
+ ::print-page
+ (fn []
+   (.print js/window)))

@@ -1,0 +1,37 @@
+@import "../theme";
+
+@color-showcase-hover: darken(@color-showcase, 20%);
+#navigation {
+  .navbar {
+    .nav-item.showcase {
+      .nav-link(@color-showcase, @color-showcase-hover);
+    }
+
+    .dropdown-menu(@color-showcase);
+
+    .dropdown .dropdown-menu .dropdown-item.technologies {
+      .dropdown-item(@color-technologies);
+    }
+    .dropdown .dropdown-menu .dropdown-item.qualifications {
+      .dropdown-item(@color-qualifications);
+    }
+    .dropdown .dropdown-menu .dropdown-item.podcasts {
+      .dropdown-item(@color-podcasts);
+    }
+    .dropdown .dropdown-menu .dropdown-item.publishing {
+      .dropdown-item(@color-publishing);
+    }
+    .dropdown .dropdown-menu .dropdown-item.public-speaking {
+      .dropdown-item(@color-public-speaking);
+    }
+    .dropdown .dropdown-menu .dropdown-item.blogs {
+      .dropdown-item(@color-blogs);
+    }
+    .dropdown .dropdown-menu .dropdown-item.projects {
+      .dropdown-item(@color-projects);
+    }
+    .dropdown .dropdown-menu .dropdown-item.community {
+      .dropdown-item(@color-community);
+    }
+  }
+}

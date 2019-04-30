@@ -1,13 +1,18 @@
 (ns clarice.subs
   (:require
-   [re-frame.core :as re-frame]))
+    [re-frame.core :as re-frame]))
 
 (re-frame/reg-sub
- ::name
- (fn [db]
-   (:name db)))
+  ::brand
+  (fn [db]
+    [(:brand-first-part db) (:brand-second-part db)]))
 
 (re-frame/reg-sub
- ::active-panel
- (fn [db _]
-   (:active-panel db)))
+  ::navigation
+  (fn [db]
+    (:navigation db)))
+
+(re-frame/reg-sub
+  ::active-panel
+  (fn [db _]
+    (:active-panel db)))

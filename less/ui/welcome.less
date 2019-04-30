@@ -1,0 +1,16 @@
+@import "../theme";
+
+@color-welcome-hover: darken(@color-welcome, 20%);
+#navigation {
+  .navbar {
+    .nav-item.welcome {
+      .nav-link(@color-welcome, @color-welcome-hover);
+    }
+  }
+
+  .quick-nav {
+    li.welcome {
+      .quick-nav(@color-welcome, 20%, 23%);
+    }
+  }
+}
