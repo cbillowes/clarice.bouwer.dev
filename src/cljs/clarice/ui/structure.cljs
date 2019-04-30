@@ -1,20 +1,26 @@
-(ns clarice.ui.structure)
+(ns clarice.ui.structure
+  (:require
+    [clarice.panels.not-found :as not-found]
+    [clarice.panels.welcome :as welcome]
+    [clarice.panels.about :as about]
+    [clarice.panels.career :as career]
+    [clarice.panels.contact :as contact]))
 
 (defmulti panel (fn [panel] panel))
 
 (defmethod panel nil [_]
-  [:h1 "Not found"])
+  (not-found/panel))
 
 (defmethod panel :welcome-panel [_]
-  [:h1 "Welcome"])
+  (welcome/panel))
 
 (defmethod panel :about-panel [_]
-  [:h1 "About"])
+  (about/panel))
 
 (defmethod panel :career-panel [_]
-  [:h1 "Career"])
+  (career/panel))
 
 (defmethod panel :contact-panel [_]
-  [:h1 "Contact"])
+  (contact/panel))
 
 
