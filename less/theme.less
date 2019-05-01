@@ -8,20 +8,23 @@
 @accent: #9a9c16;
 @mask: #097acf;
 
-@color-welcome: #c8c8c8;
-@color-about: #99C7FF;
-@color-showcase: #F0CCD1;
-@color-technologies: #E88BBF;
-@color-qualifications: #EBB15C;
-@color-career: #81FF81;
-@color-podcasts: #EB5D5D;
-@color-publishing: #8BE3E8;
-@color-public-speaking: #E4FF82;
-@color-blogs: #EB775E;
-@color-projects: #5EA1EB;
-@color-community: #C6F55A;
-@color-contact: #CC0000;
-@color-print: #FFFA91;
+@color-welcome: #E53935;
+@color-about: #D81B60;
+@color-career: #FF5722;
+@color-contact: #039BE5;
+@color-print: #FBC02D;
+@color-showcase: #CDDC39;
+
+@color-technologies: #EF5350;
+@color-qualifications: #EC407A;
+@color-podcasts: #AB47BC;
+@color-publishing: #42A5F5;
+@color-public-speaking: #D4E157;
+@color-blogs: #FF7043;
+@color-projects: #78909C;
+@color-community: #66BB6A;
+
+@font-size: 1.5rem;
 
 .nav-link(@color, @color-hover) {
   & {
@@ -32,95 +35,90 @@
 
       &:hover {
         color: @color;
+        font-weight: @bold;
+
+        i {
+          color: @color;
+        }
       }
     }
-  }
 
-  &.active, &.show {
-    background-color: @color;
+    &.active, &.show {
+      .nav-link {
+        color: @color;
+        font-weight: @bold;
 
-    &:hover {
-      background-color: @color-hover;
-    }
+        span {
+          background-color: @color;
+          color: @dark;
+        }
 
-    .nav-link {
-      font-weight: @bold;
-      color: @dark;
-    }
-  }
-}
-
-.dropdown-menu(@color) {
-  .dropdown {
-    .dropdown-menu {
-      background-color: white;
-      border: solid 1px @dark;
-
-      .dropdown-item {
-        color: @light !important;
-        background-color: @dark;
+        &:hover {
+          span {
+            background-color: @dark;
+            color: @color;
+          }
+        }
       }
     }
   }
 }
 
 .dropdown-item(@color) {
-  border: solid 1px @dark;
-  outline: solid 1px @dark;
   background-color: @dark;
-  span {
-    color: @light;
-  }
+  color: @light !important;
+  font-size: 1em;
 
   &:hover {
-    border: solid 1px @color;
-    outline: solid 1px @color;
-    background-color: @color;
     span {
-      color: @dark;
+      background-color: @dark !important;
+      color: @color !important;
+      font-weight: @bold;
     }
   }
 
   &.active {
-    font-weight: bold;
-    border: solid 1px @color;
-    outline: solid 1px @color;
-    background-color: @color;
+    background-color: @dark;
+
     span {
+      background-color: @color;
+      font-weight: bold;
       color: @dark;
-    }
-
-    &:hover {
-      border: solid 1px @dark;
-      outline: solid 1px @dark;
-      background-color: @dark;
-
-      span {
-        color: @color;
-      }
     }
   }
 }
 
 .quick-nav(@color, @top, @left) {
   &:hover {
-    border-color: @color;
 
-    i {
-      color: @color;
+    a {
+      border-color: @color;
+
+      i {
+        color: @color;
+      }
     }
   }
 
   &.active {
-    background-color: @color;
-    border-color: @bright;
+    a {
+      border-color: @color;
+      background-color: @color;
 
-    i {
-      color: @bright;
+      i {
+        color: @light;
+      }
     }
 
     &:hover {
-      background-color: @dark;
+      a {
+        border-color: @color;
+        background-color: @dark;
+
+        i {
+          color: @color;
+        }
+      }
     }
   }
 

@@ -15,6 +15,11 @@
  (fn-traced [db [_ active-panel]]
    (assoc db :active-panel active-panel)))
 
+(re-frame/reg-event-db
+ ::set-active-menu-item
+ (fn-traced [db [_ active-panel]]
+   (assoc db :active-menu-item active-panel)))
+
 (re-frame/reg-event-fx
  ::print-page
  (fn []

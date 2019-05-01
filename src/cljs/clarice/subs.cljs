@@ -16,3 +16,8 @@
   ::active-panel
   (fn [db _]
     (:active-panel db)))
+
+(re-frame/reg-sub
+  ::active-menu-item
+  (fn [db _]
+    (:active-menu-item db)))

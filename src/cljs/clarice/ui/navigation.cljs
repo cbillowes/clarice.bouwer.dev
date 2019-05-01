@@ -25,9 +25,17 @@
    [:span.fas.fa-ellipsis-v]])
 
 (defn- print-button []
-  [:button.print-button
+  [:button.navbar-print
    [:a {:on-click #(re-frame/dispatch [::events/print-page])}
     [:i.fas.fa-print]]])
+
+(defn- show-dropdown [active-panel]
+  (let [item (re-frame/subscribe [::subs/active-menu-item])]
+    (when
+      (and
+        (not (= active-panel (:parent @item)))
+        (= active-panel (:child @item)))
+      "active show")))
 
 (defn- >classes [active-panel item]
   (let [selected? (= active-panel (:panel item))]
@@ -38,7 +46,8 @@
                      :class (>classes active-item item)
                      :href  (:href item)
                      :title (:title item)}
-   [:span (:title item)]])
+   [:span (:title item)
+    [:i.fas.fa-angle-left]]])
 
 (defn- dropdown [active-item items]
   (map #(dropdown-item active-item %) items))
@@ -46,15 +55,17 @@
 (defn- menu-item [active-panel item]
   (if (> (count (:items item)) 0)
     [:li.nav-item.dropdown {:key   (:react item)
-                            :class (:class item)}
+                            :class (str (show-dropdown active-panel) " " (:class item))}
      [:a.nav-link.dropdown-toggle {:id            (:react item)
                                    :href          "#"
                                    :role          "button"
                                    :data-toggle   "dropdown"
                                    :aria-haspopup true
                                    :aria-expanded false}
-      [:span (:title item)]]
-     [:div.dropdown-menu {:aria-labelledby (:react item)}
+      [:span (:title item)
+       [:i.fas.fa-angle-down]]]
+     [:div.dropdown-menu {:aria-labelledby (:react item)
+                          :class (show-dropdown active-panel)}
       (dropdown active-panel (:items item))]]
 
     [:li.nav-item {:key   (:react item)
@@ -64,7 +75,8 @@
        [:a.nav-link {:on-click #(re-frame/dispatch [::events/print-page])}
         [:span (:title item)]]
        [:a.nav-link {:href (:href item)}
-        [:span (:title item)]])]))
+        [:span (:title item)
+         [:i.fas.fa-angle-left]]])]))
 
 (defn- toggle-menu [active-panel]
   [:div#bar.collapse.navbar-collapse
@@ -99,8 +111,8 @@
   [:div#navigation
    [:nav.sticky-top.navbar
     (brand)
-    (print-button)
     (toggler)
+    (print-button)
     (toggle-menu active-panel)]
    [:nav.quick-nav
     (menu active-panel)]])
