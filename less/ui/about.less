@@ -1,16 +1,67 @@
 @import "../theme";
 
-@color-about-hover: darken(@color-about, 20%);
+@color-about-accent: darken(@color-about, 20%);
+@about-btn-normal-fg: @dark;
+@about-btn-normal-bg: @color-about;
+@about-btn-hover-fg: @dark;
+@about-btn-hover-bg: @accent;
+@about-btn-active-fg: @dark;
+@about-btn-active-bg: @mask;
+
 #navigation {
   .navbar {
     .nav-item.about {
-      .nav-link(@color-about, @color-about-hover);
+      .nav-link(@color-about, @color-about-accent);
     }
   }
 
   .quick-nav {
     li.about {
       .quick-nav(@color-about, 28%, 32%);
+    }
+  }
+}
+
+#about.panel {
+  padding-bottom: 3.5rem;
+
+  .photo {
+    display: inline-block;
+    width: 300px;
+    height: 300px;
+    float: right;
+    border-radius: 50%;
+    //noinspection CssUnknownTarget
+    background-image: url('/img/profile.jpg');
+    background-size: cover;
+  }
+
+  .tag {
+    .tag();
+    background-color: @color-about;
+    color: @dark;
+  }
+
+  .btn {
+    .btn();
+    .btn-normal(@about-btn-normal-fg, @about-btn-normal-bg);
+    .btn-hover(@about-btn-hover-fg, @about-btn-hover-bg);
+    .btn-active(@about-btn-active-fg, @about-btn-active-bg);
+    //@background: @color-about;
+    //@normal: @dark;
+    //@hover: @light;
+    //@focus: @dark;
+    //@active: darken(@color-about, 20%);
+    //.btn(@background, @normal, @hover, @focus, @active);
+  }
+
+  #more {
+    padding-top: 3.25rem;
+    .active {
+      display: block;
+    }
+    .inactive {
+      display: none;
     }
   }
 }

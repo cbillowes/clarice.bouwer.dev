@@ -20,6 +20,11 @@
  (fn-traced [db [_ active-panel]]
    (assoc db :active-menu-item active-panel)))
 
+(re-frame/reg-event-db
+  ::about-panel-expand-to-content
+  (fn-traced [db [_ content]]
+    (assoc db :about-panel-expand-to-content content)))
+
 (re-frame/reg-event-fx
  ::print-page
  (fn []

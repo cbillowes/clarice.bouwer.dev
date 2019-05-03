@@ -21,3 +21,8 @@
   ::active-menu-item
   (fn [db _]
     (:active-menu-item db)))
+
+(re-frame/reg-sub
+  ::about-panel-expand-to-content
+  (fn [db _]
+    (:about-panel-expand-to-content db)))
