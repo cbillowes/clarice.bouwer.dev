@@ -80,22 +80,22 @@
      [:div.photo {:title "Clarice Bouwer"}]
      (blurb)
      [:button.btn
-      {:class (when (= :elaborate @expand-to) "active")
+      {:class    (when (= :elaborate @expand-to) "active")
        :on-click (expand-content (if (= :elaborate @expand-to) :nothing :elaborate))}
       "elaborate"]
 
      [:button.btn
-      {:class (when (= :interests @expand-to) "active")
+      {:class    (when (= :interests @expand-to) "active")
        :on-click (expand-content (if (= :interests @expand-to) :nothing :interests))}
       "my interests"]
 
      [:button.btn
-      {:class (when (= :preferred-technologies @expand-to) "active")
+      {:class    (when (= :preferred-technologies @expand-to) "active")
        :on-click (expand-content (if (= :preferred-technologies @expand-to) :nothing :preferred-technologies))}
       "my preferred technologies"]
 
      [:button.btn
-      {:class (when (= :experience @expand-to) "active")
+      {:class    (when (= :experience @expand-to) "active")
        :on-click (expand-content (if (= :experience @expand-to) :nothing :experience))}
       "my experience"]
 
