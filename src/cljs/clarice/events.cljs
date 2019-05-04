@@ -25,6 +25,11 @@
   (fn-traced [db [_ content]]
     (assoc db :about-panel-expand-to-content content)))
 
+(re-frame/reg-event-db
+  ::set-more-technologies
+  (fn-traced [db [_ content]]
+    (assoc db :technologies-more content)))
+
 (re-frame/reg-event-fx
  ::print-page
  (fn []

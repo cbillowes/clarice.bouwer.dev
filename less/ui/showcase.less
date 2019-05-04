@@ -33,3 +33,47 @@
     }
   }
 }
+
+#technologies.panel {
+  .showcase {
+    text-align: center;
+
+    img {
+      width: 5rem;
+      display: inline-block;
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  .more {
+    .btn();
+    .btn-normal(@dark, @color-technologies);
+    margin-top: -8px;
+    outline-offset: 0;
+  }
+
+  .expand {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+
+    span {
+      background-color: @accent;
+    }
+  }
+
+  span {
+    .tag();
+    background-color: @mask;
+    color: @dark;
+
+    &.spacer {
+      background-color: transparent;
+      color: @dim;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}

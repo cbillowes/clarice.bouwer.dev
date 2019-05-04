@@ -26,3 +26,8 @@
   ::about-panel-expand-to-content
   (fn [db _]
     (:about-panel-expand-to-content db)))
+
+(re-frame/reg-sub
+  ::technologies-more
+  (fn [db _]
+    (:technologies-more db)))
