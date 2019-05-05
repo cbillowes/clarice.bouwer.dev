@@ -53,12 +53,44 @@
 
 #career.panel {
   margin-bottom: 2rem;
+  position: relative;
+
+  .expander {
+    cursor: pointer;
+    vertical-align: middle;
+    font-size: 1.25rem;
+
+    .label {
+      font-family: @sans-serif;
+    }
+
+    i {
+      display: inline-block;
+      padding: .25rem;
+      margin-right: .5rem;
+      background-color: @light;
+      border-radius: .25rem;
+      color: @dark;
+    }
+
+    &:hover {
+      color: @color-career;
+
+      i {
+        background-color: @color-career;
+      }
+    }
+  }
 
   .spec {
     margin-top: 1em;
     background-color: darken(@dark, 5%);
     border-radius: 2.5rem;
     padding: 1em;
+
+    h2 {
+      cursor: pointer;
+    }
 
     .icon {
       overflow: hidden;
@@ -68,6 +100,19 @@
 
     .duration {
       font-size: 1.25rem;
+    }
+
+    .blurb {
+      margin-left: -1rem;
+    }
+
+    .description {
+      display: none;
+      margin-left: -1rem;
+
+      &.show {
+        display: block;
+      }
     }
   }
 

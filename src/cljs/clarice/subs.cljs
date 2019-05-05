@@ -31,3 +31,8 @@
   ::technologies-more
   (fn [db _]
     (:technologies-more db)))
+
+(re-frame/reg-sub
+  ::expand-career-panel
+  (fn [db _]
+    (:expand-career db)))
