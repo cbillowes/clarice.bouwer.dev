@@ -81,13 +81,15 @@
 (defn- toggle-menu [active-panel]
   [:div#bar.collapse.navbar-collapse
    [:ul.navbar-nav.mr-auto
-    (let [navigation (re-frame/subscribe [::subs/navigation])]
-      (map
-        (fn [item]
-          (menu-item
-            active-panel
-            item))
-        @navigation))]])
+    (doall
+      (let [navigation (re-frame/subscribe [::subs/navigation])]
+        (let [menu (map
+                     (fn [item]
+                       (menu-item
+                         active-panel
+                         item))
+                     @navigation)]
+             [:span menu (menu-item :nothing {})])))]])
 
 (defn- menu [active-panel]
   (let [navigation (re-frame/subscribe [::subs/navigation])]
