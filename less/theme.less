@@ -26,6 +26,22 @@
 
 @font-size: 1.5rem;
 
+.icon() {
+  display: inline-block;
+  border: solid 3px @light;
+  color: @light;
+  width: 5rem;
+  height: 5rem;
+  position: relative;
+  padding: 1rem;
+  border-radius: 50%;
+  cursor: pointer;
+
+  i {
+    position: absolute;
+  }
+}
+
 .nav-link(@color, @color-hover) {
   & {
     background-color: @dark;
@@ -90,7 +106,6 @@
 
 .quick-nav(@color, @top, @left) {
   &:hover {
-
     a {
       border-color: @color;
 

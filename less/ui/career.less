@@ -1,6 +1,42 @@
 @import "../theme";
 
 @color-career-hover: darken(@color-career, 20%);
+@color-career-cti: #d43840;
+@color-career-globres: #c7343c;
+@color-career-it-em: #19abe6;
+@color-career-remata: #ed4049;
+@color-career-britehouse: #7abc45;
+@color-career-dstv: #028ed2;
+@color-career-cloudafrica: #c2463a;
+
+.career-spec(@color, @top, @left) {
+  p {
+    margin: 1rem;
+  }
+
+  h2, a {
+    color: @color;
+    font-weight: @bold;
+  }
+
+  .tag {
+    background-color: @color;
+    color: darken(@color, 30%);
+  }
+
+  .icon {
+    .icon();
+    cursor: default;
+    border-color: @color;
+
+    i {
+      color: @color;
+      top: @top;
+      left: @left;
+    }
+  }
+}
+
 #navigation {
   .navbar {
     .nav-item.career {
@@ -12,5 +48,79 @@
     li.career {
       .quick-nav(@color-career, 30%, 24%);
     }
+  }
+}
+
+#career.panel {
+  margin-bottom: 2rem;
+
+  .spec {
+    margin-top: 1em;
+    background-color: darken(@dark, 5%);
+    border-radius: 2.5rem;
+    padding: 1em;
+
+    .icon {
+      overflow: hidden;
+      position: relative;
+      float: right;
+    }
+
+    .duration {
+      font-size: 1.25rem;
+    }
+  }
+
+  .cti {
+    @color: #cc0000;
+    @top: 25%;
+    @left: 32%;
+    .career-spec(@color-career-cti, @top, @left);
+  }
+
+  .globres {
+    @color: #0000cc;
+    @top: 28%;
+    @left: 26%;
+    .career-spec(@color-career-globres, @top, @left);
+  }
+
+  .it-em {
+    @color: #0000cc;
+    @top: 28%;
+    @left: 26%;
+    .career-spec(@color-career-it-em, @top, @left);
+  }
+
+  .remata {
+    @color: #0000cc;
+    @top: 28%;
+    @left: 26%;
+    .career-spec(@color-career-remata, @top, @left);
+
+    .tag {
+      color: @dark;
+    }
+  }
+
+  .britehouse {
+    @color: #0000cc;
+    @top: 28%;
+    @left: 26%;
+    .career-spec(@color-career-britehouse, @top, @left);
+  }
+
+  .dstv {
+    @color: #0000cc;
+    @top: 28%;
+    @left: 26%;
+    .career-spec(@color-career-dstv, @top, @left);
+  }
+
+  .cloudafrica {
+    @color: #0000cc;
+    @top: 28%;
+    @left: 26%;
+    .career-spec(@color-career-cloudafrica, @top, @left);
   }
 }
