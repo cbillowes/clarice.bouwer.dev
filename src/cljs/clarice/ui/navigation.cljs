@@ -43,7 +43,7 @@
 
 (defn- dropdown-item [active-item item]
   [:a.dropdown-item {:key   (:react item)
-                     :class (>classes active-item item)
+                     :class (str "collapse-item " (>classes active-item item))
                      :href  (:href item)
                      :title (:title item)}
    [:span (:title item)
@@ -69,7 +69,7 @@
       (dropdown active-panel (:items item))]]
 
     [:li.nav-item {:key   (:react item)
-                   :class (>classes active-panel item)
+                   :class (str "collapse-item " (>classes active-panel item))
                    :title (:description item)}
      (if (= "print" (:class item))
        [:a.nav-link {:on-click #(re-frame/dispatch [::events/print-page])}
