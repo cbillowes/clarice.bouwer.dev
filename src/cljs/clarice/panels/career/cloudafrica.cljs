@@ -1,11 +1,11 @@
 (ns clarice.panels.career.cloudafrica
   (:require
-    [clarice.ui.career-panel :as p]
+    [clarice.ui.spec :as p]
     [clarice.helpers :refer [anchor highlighted-tag]]))
 
 (defn panel []
-  (p/panel
-    {:panel       :cloudafrica
+  (p/spec
+    {:spec       :cloudafrica
      :icon        "fas fa-server"
      :company     "CloudAfrica"
      :position    "Senior Systems and Full Stack Developer"

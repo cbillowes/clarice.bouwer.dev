@@ -1,11 +1,11 @@
 (ns clarice.panels.career.globres
   (:require
-    [clarice.ui.career-panel :as p]
+    [clarice.ui.spec :as p]
     [clarice.helpers :refer [anchor highlighted-tag]]))
 
 (defn panel []
-  (p/panel
-    {:panel       :globres
+  (p/spec
+    {:spec       :globres
      :icon        "fas fa-hotel"
      :company     "Globres"
      :position    "Junior Web Developer"

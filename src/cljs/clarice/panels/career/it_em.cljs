@@ -1,11 +1,11 @@
 (ns clarice.panels.career.it-em
   (:require
-    [clarice.ui.career-panel :as p]
+    [clarice.ui.spec :as p]
     [clarice.helpers :refer [anchor highlighted-tag]]))
 
 (defn panel []
-  (p/panel
-    {:panel       :it-em
+  (p/spec
+    {:spec       :it-em
      :icon        "fas fa-calendar-alt"
      :company     "IT Event Management"
      :position    "Lead Senior Web Developer"

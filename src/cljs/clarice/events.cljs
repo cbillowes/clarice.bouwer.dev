@@ -30,7 +30,7 @@
     (assoc db :technologies-more content)))
 
 (re-frame/reg-event-db
-  ::expand-career-panel
+  ::expand
   (fn-traced [db [_ panel]]
     (assoc db :expand-career panel)))
 

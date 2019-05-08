@@ -1,11 +1,11 @@
 (ns clarice.panels.career.cti
   (:require
-    [clarice.ui.career-panel :as p]
+    [clarice.ui.spec :as p]
     [clarice.helpers :refer [anchor]]))
 
 (defn panel []
-  (p/panel
-    {:panel       :cti
+  (p/spec
+    {:spec       :cti
      :icon        "fas fa-user-graduate"
      :company     "Computer Training Institute"
      :position    "Junior Instructor"

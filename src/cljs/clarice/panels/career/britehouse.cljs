@@ -1,11 +1,11 @@
 (ns clarice.panels.career.britehouse
   (:require
-    [clarice.ui.career-panel :as p]
+    [clarice.ui.spec :as s]
     [clarice.helpers :refer [anchor highlighted-tag]]))
 
 (defn panel []
-  (p/panel
-    {:panel       :britehouse
+  (s/spec
+    {:spec       :britehouse
      :icon        "fas fa-file-signature"
      :company     "Britehouse"
      :position    "Senior Software Developer"

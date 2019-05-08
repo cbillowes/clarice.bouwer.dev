@@ -33,6 +33,6 @@
     (:technologies-more db)))
 
 (re-frame/reg-sub
-  ::expand-career-panel
+  ::expanded
   (fn [db _]
     (:expand-career db)))

@@ -1,11 +1,11 @@
 (ns clarice.panels.career.dstv
   (:require
-    [clarice.ui.career-panel :as p]
+    [clarice.ui.spec :as p]
     [clarice.helpers :refer [anchor highlighted-tag]]))
 
 (defn panel []
-  (p/panel
-    {:panel       :dstv
+  (p/spec
+    {:spec       :dstv
      :icon        "fas fa-satellite"
      :company     "DStv Digital Media (MultiChoice)"
      :position    "Senior Software Developer"

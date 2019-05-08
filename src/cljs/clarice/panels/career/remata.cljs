@@ -1,14 +1,14 @@
 (ns clarice.panels.career.remata
   (:require
-    [clarice.ui.career-panel :as p]
+    [clarice.ui.spec :as p]
     [clarice.helpers :refer [anchor highlighted-tag]]))
 
 (defn panel []
-  (p/panel
-    {:panel       :remata
+  (p/spec
+    {:spec       :remata
      :icon        "fas fa-print"
-     :company     "Remata Cross Media Solutions"
-     :position    "Senior Developer"
+     :title     "Remata Cross Media Solutions"
+     :sub-title    "Senior Developer"
      :duration    "Jul 2012 - Mar 2014 (1 year and 9 months)"
      :blurb        [:p
                     (anchor "Remata" "https://www.remata.co.za/")
