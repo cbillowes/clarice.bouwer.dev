@@ -193,6 +193,25 @@
   }
 }
 
+#podcasts.panel {
+  .expander(@color-podcasts);
+
+  .spec {
+    @top: 25%;
+    @left: 36%;
+    .spec(@color-podcasts, @top, @left);
+
+    i.fa-book-reader {
+      left: 30%;
+    }
+  }
+
+  .tag {
+    background-color: @color-podcasts;
+    color: @dark;
+  }
+}
+
 #blogs.panel {
   .expander(@color-blogs);
 
