@@ -52,6 +52,19 @@
   }
 }
 
+.panel(@color, @icon-fg-color, @top, @left) {
+  .expander(@color);
+
+  .spec {
+    .spec(@color, @top, @left);
+  }
+
+  .tag {
+    background-color: @color;
+    color: @icon-fg-color;
+  }
+}
+
 .spec {
   margin-top: 1rem;
   background-color: darken(@dark, 5%);
@@ -63,7 +76,7 @@
   }
 
   .icon {
-    overflow:hidden;
+    overflow: hidden;
     position: relative;
     float: right;
   }
@@ -175,54 +188,25 @@
 }
 
 #qualifications.panel {
-  .expander(@color-qualifications);
+  @top: 25%;
+  @left: 25%;
+  .panel(@color-qualifications, @dark, @top, @left);
 
   .spec {
-    @top: 25%;
-    @left: 25%;
-    .spec(@color-qualifications, @top, @left);
-
     i.fa-book-reader {
       left: 30%;
     }
-  }
-
-  .tag {
-    background-color: @color-qualifications;
-    color: @dark;
   }
 }
 
 #podcasts.panel {
-  .expander(@color-podcasts);
-
-  .spec {
-    @top: 25%;
-    @left: 36%;
-    .spec(@color-podcasts, @top, @left);
-
-    i.fa-book-reader {
-      left: 30%;
-    }
-  }
-
-  .tag {
-    background-color: @color-podcasts;
-    color: @dark;
-  }
+  @top: 25%;
+  @left: 36%;
+  .panel(@color-podcasts, @dark, @top, @left);
 }
 
 #blogs.panel {
-  .expander(@color-blogs);
-
-  .spec {
-    @top: 25%;
-    @left: 35%;
-    .spec(@color-blogs, @top, @left);
-  }
-
-  .tag {
-    background-color: @color-blogs;
-    color: @dark;
-  }
+  @top: 25%;
+  @left: 35%;
+  .panel(@color-blogs, @dark, @top, @left);
 }
