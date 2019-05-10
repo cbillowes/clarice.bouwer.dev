@@ -5,10 +5,10 @@
 
 (defn panel []
   (p/spec
-    {:spec       :cti
+    {:spec        :cti
      :icon        "fas fa-user-graduate"
-     :company     "Computer Training Institute"
-     :position    "Junior Instructor"
+     :title       "Computer Training Institute"
+     :sub-title   "Junior Instructor"
      :duration    "Jan 2005 - Dec 2005 (1 year)"
      :blurb       [:p "Also referred to as "
                    (anchor "CTI" "https://www.cti.ac.za/")

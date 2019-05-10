@@ -5,10 +5,10 @@
 
 (defn panel []
   (p/spec
-    {:spec       :dstv
+    {:spec        :dstv
      :icon        "fas fa-satellite"
-     :company     "DStv Digital Media (MultiChoice)"
-     :position    "Senior Software Developer"
+     :title       "DStv Digital Media (MultiChoice)"
+     :sub-title   "Senior Software Developer"
      :duration    "Jun 2016 - Jun 2018 (2 years)"
      :blurb       [:p
                    (anchor "MultiChoice" "https://www.multichoice.co.za/")

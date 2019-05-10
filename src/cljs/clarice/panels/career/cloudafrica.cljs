@@ -5,10 +5,10 @@
 
 (defn panel []
   (p/spec
-    {:spec       :cloudafrica
+    {:spec        :cloudafrica
      :icon        "fas fa-server"
-     :company     "CloudAfrica"
-     :position    "Senior Systems and Full Stack Developer"
+     :title       "CloudAfrica"
+     :sub-title   "Senior Systems and Full Stack Developer"
      :duration    "1 July 2018 (Current)"
      :blurb       [:p
                    (anchor "CloudAfrica" "https://www.cloudafrica.net/")

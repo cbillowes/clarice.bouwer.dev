@@ -5,10 +5,10 @@
 
 (defn panel []
   (s/spec
-    {:spec       :britehouse
+    {:spec        :britehouse
      :icon        "fas fa-file-signature"
-     :company     "Britehouse"
-     :position    "Senior Software Developer"
+     :title       "Britehouse"
+     :sub-title   "Senior Software Developer"
      :duration    "Apr 2014 - May 2016 (2 years and 2 months)"
      :blurb       [:p "3Fifteen, a sought after custom software development house specializing in Microsoft-enabled
                    and Mobile Technologies, was later acquired by "

@@ -5,10 +5,10 @@
 
 (defn panel []
   (p/spec
-    {:spec       :globres
+    {:spec        :globres
      :icon        "fas fa-hotel"
-     :company     "Globres"
-     :position    "Junior Web Developer"
+     :title       "Globres"
+     :sub-title   "Junior Web Developer"
      :duration    "Jan 2006 - Sept 2006 (8 months)"
      :blurb       [:p
                    (anchor "GlobRes" "https://www.globres.com/")

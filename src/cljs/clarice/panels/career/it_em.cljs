@@ -5,10 +5,10 @@
 
 (defn panel []
   (p/spec
-    {:spec       :it-em
+    {:spec        :it-em
      :icon        "fas fa-calendar-alt"
-     :company     "IT Event Management"
-     :position    "Lead Senior Web Developer"
+     :title       "IT Event Management"
+     :sub-title   "Lead Senior Web Developer"
      :duration    "Sept 2006 - Apr 2012 (5 years and 8 months)"
      :blurb       [:p "Referred to as "
                    (anchor "IT-EM" "http://www.it-em.co.za/")
