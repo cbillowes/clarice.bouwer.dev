@@ -63,6 +63,12 @@
     background-color: @color;
     color: @icon-fg-color;
   }
+
+  blockquote {
+    border-left: solid 5px @color;
+    color: lighten(@color, 10%);
+    padding-left: 1rem;
+  }
 }
 
 .spec {
@@ -203,6 +209,12 @@
   @top: 25%;
   @left: 36%;
   .panel(@color-podcasts, @dark, @top, @left);
+}
+
+#publishing.panel {
+  @top: 28%;
+  @left: 30%;
+  .panel(@color-publishing, @dark, @top, @left);
 }
 
 #public-speaking.panel {
