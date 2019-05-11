@@ -14,9 +14,8 @@
                    (anchor "MultiChoice" "https://www.multichoice.co.za/")
                    " is a leading video entertainment company. DStv Digital Media developed online solutions for the DStv brand."]
      :description [:div
-                   [:p
-                    (anchor "MultiChoice" "https://www.multichoice.co.za/")
-                    " is a leading video entertainment company. DStv Digital Media developed online solutions for the DStv brand."]
-                   [:p "After joining permanently, I joined the DStv Now team working on"
+                   [:p]
+                   [:p "After joining permanently, I joined the DStv Now team working on the "
                     (highlighted-tag "VOD") "(Video On-Demand) and"
-                    (highlighted-tag "Live Streaming")]]}))
+                    (highlighted-tag "Live Streaming")
+                    "solution for DStv subscribers."]]}))

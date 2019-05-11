@@ -1,0 +1,71 @@
+@import "../theme";
+
+body {
+  background-color: @dark;
+  color: @light;
+  font-family: @serif;
+  font-size: 24pt;
+  line-height: 3.5rem;
+
+  @media print {
+    background-color: #fff;
+    font-size: 16pt;
+    color: @dark;
+    line-height: 2.5rem;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: @sans-serif;
+  font-weight: @bold;
+  line-height: 3.5rem;
+}
+
+p {
+  margin-bottom: 3.25rem;
+
+  @media print {
+    margin-bottom: 1rem;
+  }
+}
+
+.tag {
+  border-radius: 0.25rem;
+  margin: 0.25rem 0.25rem;
+  padding: 0 0.35rem;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  display: inline-block;
+  font-family: @sans-serif;
+
+  @media print {
+    font-size: 1rem;
+    font-weight: @bold;
+    padding: 0 .5rem;
+    margin-bottom: 0;
+    background-color: darken(@light, 10%);
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+  }
+}
+
+@media print {
+  body {
+    margin: 2.5rem;
+
+    .container {
+      min-width: 850px !important;
+    }
+  }
+
+  a::after {
+    margin-left: .25rem;
+    content: attr(href);
+    display: inline-block;
+  }
+
+  i {
+    font-size: 24pt;
+  }
+}

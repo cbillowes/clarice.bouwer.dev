@@ -30,4 +30,5 @@
             "mailto:clarice.bouwer.dev"
             {:title    "Get in touch with me"
              :same-tab true
-             :class    "email"})]])
+             :class    "email"})]
+   [:img.qrcode {:src "/img/qrcode.svg"}]])

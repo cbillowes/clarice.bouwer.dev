@@ -10,24 +10,31 @@
     .dropdown .dropdown-menu .dropdown-item.technologies {
       .dropdown-item(@color-technologies);
     }
+
     .dropdown .dropdown-menu .dropdown-item.qualifications {
       .dropdown-item(@color-qualifications);
     }
+
     .dropdown .dropdown-menu .dropdown-item.podcasts {
       .dropdown-item(@color-podcasts);
     }
+
     .dropdown .dropdown-menu .dropdown-item.publishing {
       .dropdown-item(@color-publishing);
     }
+
     .dropdown .dropdown-menu .dropdown-item.public-speaking {
       .dropdown-item(@color-public-speaking);
     }
+
     .dropdown .dropdown-menu .dropdown-item.blogs {
       .dropdown-item(@color-blogs);
     }
+
     .dropdown .dropdown-menu .dropdown-item.projects {
       .dropdown-item(@color-projects);
     }
+
     .dropdown .dropdown-menu .dropdown-item.community {
       .dropdown-item(@color-community);
     }
@@ -42,6 +49,10 @@
       width: 5rem;
       display: inline-block;
       margin-bottom: 1.5rem;
+
+      @media print {
+        margin: 1rem;
+      }
     }
   }
 
@@ -50,30 +61,55 @@
     .btn-normal(@dark, @color-technologies);
     margin-top: -8px;
     outline-offset: 0;
+
+    @media print {
+      display: none;
+    }
   }
 
   .expand {
     display: none;
 
+    @media print {
+      margin-top: 2.5rem;
+    }
+
     &.active {
       display: block;
     }
 
-    span {
+    .tag {
       background-color: @accent;
+
+      @media print {
+        background-color: lighten(@light, 10%);
+        margin: 0.45rem .5rem;
+      }
+    }
+
+    @media print {
+      display: block;
     }
   }
 
   span {
-    .tag();
     background-color: @mask;
     color: @dark;
+    @media print {
+      margin: 0.45rem .5rem;
+    }
 
     &.spacer {
       background-color: transparent;
       color: @dim;
       padding-left: 0;
       padding-right: 0;
+    }
+  }
+
+  @media print {
+    .tag {
+      background-color: lighten(@light, 10%);
     }
   }
 }

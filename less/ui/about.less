@@ -34,12 +34,27 @@
     //noinspection CssUnknownTarget
     background-image: url('/img/profile.jpg');
     background-size: cover;
+
+    @media print {
+      display: none;
+    }
+  }
+
+  img.photo {
+    display: none;
+
+    @media print {
+      display: inline-block;
+    }
   }
 
   .tag {
-    .tag();
     background-color: @color-about;
     color: @dark;
+
+    @media print {
+      background-color: lighten(@light, 10%);
+    }
   }
 
   .btn {
@@ -47,6 +62,10 @@
     .btn-normal(@about-btn-normal-fg, @about-btn-normal-bg);
     .btn-hover(@about-btn-hover-fg, @about-btn-hover-bg);
     .btn-active(@about-btn-active-fg, @about-btn-active-bg);
+
+    @media print {
+      display: none;
+    }
   }
 
   #more {
@@ -58,6 +77,10 @@
 
     .inactive {
       display: none;
+
+      @media print {
+        display: block;
+      }
     }
   }
 }

@@ -2,7 +2,8 @@
   (:require
     [re-frame.core :as re-frame]
     [clarice.subs :as subs]
-    [clarice.events :as events]))
+    [clarice.events :as events]
+    [clarice.helpers :refer [highlighted-tag]]))
 
 (defn panel []
   (let [more (re-frame/subscribe [::subs/technologies-more])]
@@ -20,68 +21,73 @@
       [:img {:src "/img/linux.png"}]
       [:img {:src "/img/intellij.png"}]]
      [:div#accent
-      [:span "C#"]
-      [:span "Clojure"]
-      [:span "ClojureScript"]
-      [:span "JavaScript"]
-      [:span "HTML5"]
-      [:span "CSS3"]
-      [:span "Datomic"]
-      [:span "SQL"]
-      [:span "Git"]
+      (highlighted-tag "C#")
+      (highlighted-tag "Clojure")
+      (highlighted-tag "ClojureScript")
+      (highlighted-tag "JavaScript")
+      (highlighted-tag "HTML5")
+      (highlighted-tag "CSS3")
+      (highlighted-tag "Datomic")
+      (highlighted-tag "SQL")
+      (highlighted-tag "Git")
       [:button.more.btn
        {:on-click #(re-frame/dispatch [::events/set-more-technologies (not @more)])}
        (if (true? @more) [:i.fas.fa-angle-left] [:i.fas.fa-angle-right])]]
      [:div.expand {:class (if (true? @more) "active" "inactive")}
-      [:span "Linux"]
-      [:span "Windows"]
+      (highlighted-tag "Linux")
+      (highlighted-tag "Windows")
       [:span.spacer.fas.fa-ellipsis-v]
 
-      [:span "Reagent"]
-      [:span "re-frame"]
+      (highlighted-tag "Reagent")
+      (highlighted-tag "re-frame")
       [:span.spacer.fas.fa-ellipsis-v]
 
-      [:span "WebAPI"]
-      [:span "Entity Framework"]
-      [:span "MVC"]
-      [:span "LINQ"]
-      [:span "VB.NET"]
-      [:span "Solr"]
+      (highlighted-tag "WebAPI")
+      (highlighted-tag "Entity Framework")
+      (highlighted-tag "MVC")
+      (highlighted-tag "LINQ")
+      (highlighted-tag "VB.NET")
+      (highlighted-tag "Solr")
       [:span.spacer.fas.fa-ellipsis-v]
 
-      [:span "JSON"]
-      [:span "XML"]
-      [:span "CSV"]
-      [:span "Gatsby"]
-      [:span "Jekyll"]
-      [:span "React"]
-      [:span "jQuery"]
-      [:span "SASS"]
-      [:span "LESS"]
-      [:span "Handlebars"]
-      [:span "Grunt"]
-      [:span "Webpack"]
-      [:span "Bootstrap"]
-      [:span "Semantic UI"]
+      (highlighted-tag "JSON")
+      (highlighted-tag "XML")
+      (highlighted-tag "CSV")
       [:span.spacer.fas.fa-ellipsis-v]
 
-      [:span "infrastructor"]
-      [:span "Jenkins"]
-      [:span "Gitlab"]
-      [:span "CircleCI"]
-      [:span "Travis"]
+      (highlighted-tag "Gatsby")
+      (highlighted-tag "Jekyll")
+      (highlighted-tag "React")
+      (highlighted-tag "jQuery")
       [:span.spacer.fas.fa-ellipsis-v]
 
-      [:span "vmadm"]
-      [:span "fwadm"]
-      [:span "imgadm"]
-      [:span "proxmox"]
+      (highlighted-tag "SASS")
+      (highlighted-tag "LESS")
+      (highlighted-tag "Handlebars")
+      (highlighted-tag "Grunt")
+      (highlighted-tag "Webpack")
+      (highlighted-tag "Bootstrap")
+      (highlighted-tag "Semantic UI")
       [:span.spacer.fas.fa-ellipsis-v]
 
-      [:span "Adobe Photoshop"]
-      [:span "Adobe Illustrator"]
+      (highlighted-tag "infrastructor")
+      (highlighted-tag "Jenkins")
+      (highlighted-tag "Gitlab")
+      (highlighted-tag "CircleCI")
+      (highlighted-tag "Travis")
       [:span.spacer.fas.fa-ellipsis-v]
 
-      [:span "Visual Studio Code"]
-      [:span "Microsoft Visual Studio"]
-      [:span "IDEA IntelliJ"]]]))
+      (highlighted-tag "vmadm")
+      (highlighted-tag "fwadm")
+      (highlighted-tag "imgadm")
+      (highlighted-tag "proxmox")
+      [:span.spacer.fas.fa-ellipsis-v]
+
+      (highlighted-tag "Adobe Photoshop")
+      (highlighted-tag "Adobe Illustrator")
+      (highlighted-tag "pixlr")
+      [:span.spacer.fas.fa-ellipsis-v]
+
+      (highlighted-tag "Visual Studio Code")
+      (highlighted-tag "Microsoft Visual Studio")
+      (highlighted-tag "IDEA IntelliJ")]]))

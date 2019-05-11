@@ -22,12 +22,6 @@
     color: @color;
     font-weight: bold;
   }
-
-  .tag {
-    background-color: @color;
-    color: darken(@color, 30%);
-  }
-
   .icon {
     .icon();
     color: @color;
@@ -49,10 +43,15 @@
         background-color: @color;
       }
     }
+
+    @media print {
+      display: none;
+    }
   }
 }
 
 .panel(@color, @icon-fg-color, @top, @left) {
+  margin-bottom: 3rem;
   .expander(@color);
 
   .spec {
@@ -62,12 +61,17 @@
   .tag {
     background-color: @color;
     color: @icon-fg-color;
+
+    @media print {
+      background-color: lighten(@light, 10%);
+    }
   }
 
   blockquote {
+    margin: 2rem auto;
     border-left: solid 5px @color;
     color: lighten(@color, 10%);
-    padding-left: 1rem;
+    padding-left: 2.5rem;
   }
 }
 
@@ -93,11 +97,21 @@
 
   .description {
     display: none;
-    margin-left: -1rem;
 
     &.show {
       display: block;
     }
+
+    @media print {
+      display: block;
+    }
+  }
+
+  @media print {
+    background-color: #fff;
+    padding: 0;
+    margin-bottom: 0;
+    margin-top: 0;
   }
 }
 
@@ -201,6 +215,10 @@
   .spec {
     i.fa-book-reader {
       left: 30%;
+    }
+    i.fa-certificate {
+      left: 28%;
+      top: 28%;
     }
   }
 }

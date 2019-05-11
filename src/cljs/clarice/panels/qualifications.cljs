@@ -11,7 +11,7 @@
    (expander/component)
    (s/spec
      {:spec        :cti-vb.net
-      :icon        "fas fa-graduation-cap"
+      :icon        "fas fa-certificate"
       :title       "VB.NET Certificate"
       :sub-title   "Computer Training Institute"
       :duration    "Aug 2005 - Oct 2005"

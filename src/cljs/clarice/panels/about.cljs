@@ -78,6 +78,7 @@
     [:div#about.panel
      [:h1 "This is me..."]
      [:div.photo {:title "Clarice Bouwer"}]
+     [:img.photo {:src "/img/profile.jpg"}]
      (blurb)
      [:button.btn
       {:class    (when (= :elaborate @expand-to) "active")
