@@ -56,7 +56,11 @@
 
 #navigation {
   font-family: @sans-serif;
-  margin-bottom: 2rem;
+
+  .sticky-top {
+    position: fixed;
+    width: 100%;
+  }
 
   .navbar {
     background-color: @dark;
@@ -133,6 +137,7 @@
 
   .quick-nav {
     padding: 0;
+    margin-top: 7rem;
 
     ul {
       padding: 0;
