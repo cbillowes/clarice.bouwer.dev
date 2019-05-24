@@ -30,6 +30,7 @@
   (defroute "/about" [] (activate-panel :about-panel))
   (defroute "/career" [] (activate-panel :career-panel))
   (defroute "/contact" [] (activate-panel :contact-panel))
+  (defroute "/resume" [] (activate-panel :resume-panel))
   (defroute "/technologies" [] (activate-panel :technologies-panel :showcase-panel))
   (defroute "/qualifications" [] (activate-panel :qualifications-panel :showcase-panel))
   (defroute "/podcasts" [] (activate-panel :podcasts-panel :showcase-panel))

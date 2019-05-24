@@ -5,6 +5,7 @@
     [clarice.panels.about :as about]
     [clarice.panels.career :as career]
     [clarice.panels.contact :as contact]
+    [clarice.panels.resume :as resume]
     [clarice.panels.technologies :as technologies]
     [clarice.panels.qualifications :as qualifications]
     [clarice.panels.podcasts :as podcasts]
@@ -30,6 +31,9 @@
 
 (defmethod panel :contact-panel [_]
   (contact/panel))
+
+(defmethod panel :resume-panel [_]
+  (resume/panel))
 
 (defmethod panel :technologies-panel [_]
   (technologies/panel))

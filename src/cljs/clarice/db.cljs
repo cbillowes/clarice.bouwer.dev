@@ -108,9 +108,9 @@
                         :panel       :contact-panel}
 
                        {:react       "13"
-                        :title       "Print"
-                        :description "Print my resume"
-                        :class       "print"
-                        :icon        "fas fa-print"
-                        :href        "/#/print"
-                        :panel       :print-panel}]})
+                        :title       "Resume"
+                        :description "Complete resume"
+                        :class       "resume"
+                        :icon        "fas fa-file"
+                        :href        "/#/resume"
+                        :panel       :resume-panel}]})

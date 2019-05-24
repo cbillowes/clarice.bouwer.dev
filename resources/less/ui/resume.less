@@ -1,0 +1,16 @@
+@import "../theme";
+
+@color-resume-hover: darken(@color-resume, 20%);
+#navigation {
+  .navbar {
+    .nav-item.resume {
+      .nav-link(@color-resume, @color-resume-hover);
+    }
+  }
+
+  .quick-nav {
+    li.resume {
+      .quick-nav(@color-resume, 28%, 35%);
+    }
+  }
+}
