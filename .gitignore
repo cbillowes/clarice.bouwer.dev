@@ -5,3 +5,5 @@
 /resources/public/js/compiled
 /resources/public/css
 out
+*.tgz
+.rebel_readline_history
