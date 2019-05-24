@@ -1,5 +1,4 @@
 @import "../theme";
-@color-navbar: darken(@dark, 2%);
 
 .navbar-button() {
   outline: none;
@@ -27,7 +26,6 @@
 
   .dropdown-menu {
     padding: 0;
-    background-color: @dark;
     color: @light;
     border: none;
 
@@ -67,8 +65,8 @@
     background-color: @color-navbar;
     display: block;
     font-size: 1.25rem;
-    border-bottom: 10px solid #9a9c16;
-    outline: solid 10px @dark;
+    border-bottom: 10px solid @accent;
+    outline: solid 10px @color-navbar;
     margin-bottom: 3rem;
     padding: 0;
 
@@ -108,21 +106,22 @@
       background-color: @color-navbar;
       position: fixed;
       right: 0;
-      padding: 0 2rem 1rem 1rem;
+      padding: 0 2rem 2rem 2rem;
       margin-top: 1rem;
     }
 
     .nav-link, .dropdown-item {
       background-color: @color-navbar;
+      min-width: 180px;
 
-      span {
+      div {
         padding: .5em;
         display: inline-block;
       }
     }
 
     .dropdown-item {
-      span {
+      div {
         margin-bottom: 0.5rem;
       }
     }

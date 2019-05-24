@@ -80,26 +80,27 @@
   }
 }
 
+@color-navbar: darken(@dark, 1%);
 .dropdown-item(@color) {
-  background-color: @dark;
+  background-color: @color-navbar;
   color: @light !important;
   font-size: 1em;
 
   &:hover {
     span {
-      background-color: @dark !important;
+      background-color: @color-navbar !important;
       color: @color !important;
       font-weight: @bold;
     }
   }
 
   &.active {
-    background-color: @dark;
+    background-color: @color-navbar;
 
     span {
       background-color: @color;
       font-weight: bold;
-      color: @dark;
+      color: @color-navbar;
     }
   }
 }

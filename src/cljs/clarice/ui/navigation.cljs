@@ -63,7 +63,7 @@
                                    :data-toggle   "dropdown"
                                    :aria-haspopup true
                                    :aria-expanded false}
-      [:span (:title item)
+      [:div (:title item)
        [:i.fas.fa-angle-down]]]
      [:div.dropdown-menu {:aria-labelledby (:react item)
                           :class (show-dropdown active-panel)}
@@ -74,9 +74,9 @@
                    :title (:description item)}
      (if (= "print" (:class item))
        [:a.nav-link {:on-click #(re-frame/dispatch [::events/print-page])}
-        [:span (:title item)]]
+        [:div (:title item)]]
        [:a.nav-link {:href (:href item)}
-        [:span (:title item)
+        [:div (:title item)
          [:i.fas.fa-angle-left]]])]))
 
 (defn- toggle-menu [active-panel]
