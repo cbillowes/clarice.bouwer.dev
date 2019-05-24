@@ -8,6 +8,9 @@
 (defn- blurb
   []
   [:div
+   [:img.photo {:title "Clarice Bouwer"
+                :alt "Clarice Bouwer"
+                :src "/img/profile.jpg"}]
    [:p "I write code. I share code. I love code."]
    [:p "I enjoy software development both as a profession and a hobby. In my workplace I write
    code to solve real world problems. In my spare time, I explore new and better techniques, technologies
@@ -76,9 +79,7 @@
 (defn panel []
   (let [expand-to (re-frame/subscribe [::subs/about-panel-expand-to-content])]
     [:div#about.panel
-     [:h1 "This is me..."]
-     [:div.photo {:title "Clarice Bouwer"}]
-     [:img.photo {:src "/img/profile.jpg"}]
+     [:h1 "This is me"]
      (blurb)
      [:button.btn
       {:class    (when (= :elaborate @expand-to) "active")
@@ -105,3 +106,7 @@
       (interests @expand-to)
       (experience @expand-to)
       (preferred-technologies @expand-to)]]))
+
+(defn micro-panel []
+  [:div#about.panel
+   (blurb)])
