@@ -6,13 +6,14 @@
 
 (defn- brand []
   (let [brand (re-frame/subscribe [::subs/brand])]
-    [:a.navbar-brand.brand
-     {:href "#/"}
-     "{ "
-     [:span.first-part (first @brand)]
-     " "
-     [:span.second-part (second @brand)]
-     " }"]))
+    [:div.container
+     [:a.navbar-brand.brand
+      {:href "#/"}
+      "{ "
+      [:span.first-part (first @brand)]
+      " "
+      [:span.second-part (second @brand)]
+      " }"]]))
 
 (defn- toggler []
   [:button.navbar-toggler
@@ -89,7 +90,7 @@
                          active-panel
                          item))
                      @navigation)]
-             [:span menu (menu-item :nothing {})])))]])
+             [:span menu])))]])
 
 (defn- menu [active-panel]
   (let [navigation (re-frame/subscribe [::subs/navigation])]
@@ -112,10 +113,10 @@
 (defn navigation [active-panel]
   [:div#navigation
    [:nav.sticky-top.navbar
-    (brand)
     (toggler)
     (print-button)
+    (brand)
     (toggle-menu active-panel)]
-   [:nav.quick-nav
+   [:nav.quick-nav.container
     (menu active-panel)]])
 

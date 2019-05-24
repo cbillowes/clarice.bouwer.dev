@@ -1,16 +1,21 @@
 @import "../theme";
 
 .navbar-button() {
-  background: none;
   outline: none;
   border: none;
-  border-radius: 0;
   width: 3rem;
   height: 3rem;
   float: right;
   display: block;
-  margin-top: .25rem;
   margin-left: 0.4rem;
+  margin-right: 1.5rem;
+  margin-top: .5rem;
+  border-radius: 5px;
+  background-color: @dark;
+
+  &:hover {
+    background-color: lighten(@dark, 5%);
+  }
 }
 
 .dropdown {
@@ -57,10 +62,15 @@
     background-color: @dark;
     display: block;
     font-size: 1.25rem;
-    border-bottom: dashed 1px lighten(@dark, 10%);
+    border-bottom: 10px solid #9a9c16;
     outline: solid 10px @dark;
     margin-bottom: 3rem;
     padding: 0;
+
+    .container {
+      display: block;
+      height: 4.5rem;
+    }
 
     .navbar-brand,
     .navbar-toggler,
@@ -76,6 +86,7 @@
     .navbar-print {
       .navbar-button();
       position: relative;
+      margin-right: .5rem;
 
       i {
         position: absolute;
@@ -102,35 +113,6 @@
     }
 
     .nav-item {
-      border-top: solid 1px lighten(@dark, 4%);
-
-      &.print {
-        padding-right: 1.45rem;
-        cursor: pointer;
-      }
-
-      &:last-child {
-        height: 0;
-        position: relative;
-        border-top: none;
-        border-bottom: solid 5px @accent;
-
-        .nav-link {
-          i { display: none; }
-        }
-
-        &::after {
-          @width: 30px;
-          border-top: solid @width @accent;
-          border-left: solid @width transparent;
-          border-right: solid @width transparent;
-          border-bottom: solid @width transparent;
-          content: "";
-          position: absolute;
-          left: 50%;
-          top: 0;
-        }
-      }
       text-align: right;
       line-height: 1.25rem;
 

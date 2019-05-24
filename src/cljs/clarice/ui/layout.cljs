@@ -7,6 +7,7 @@
 
 (defn render []
   (let [active-panel (re-frame/subscribe [::subs/active-panel])]
-    [:div.container
+    [:div
      (navigation @active-panel)
-     (ui/panel @active-panel)]))
+     [:div.container
+      (ui/panel @active-panel)]]))
