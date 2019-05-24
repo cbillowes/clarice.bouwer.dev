@@ -1,5 +1,5 @@
 (ns clarice.panels.not-found)
 
 (defn panel []
-  [:div
+  [:div.panel
    [:h1 "Not Found"]])

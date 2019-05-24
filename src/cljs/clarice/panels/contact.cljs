@@ -3,7 +3,7 @@
     [clarice.helpers :refer [anchor]]))
 
 (defn panel []
-  [:div#contact
+  [:div#contact.panel
    [:h1 "Get in touch with me"]
    [:div.icons
     (anchor [:i.fab.fa-twitter]
