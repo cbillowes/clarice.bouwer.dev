@@ -49,7 +49,7 @@ Figwheel will automatically push cljs changes to the browser.
 
 Wait a bit, then browse to [http://localhost:3449](http://localhost:3449).
 
-# Build and deploy
+## Build and deploy
 
 ```
 ./build.sh
