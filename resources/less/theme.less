@@ -44,8 +44,6 @@
 
 .nav-link(@color, @color-hover) {
   & {
-    background-color: @dark;
-
     .nav-link {
       color: @light;
 
@@ -61,19 +59,16 @@
 
     &.active, &.show {
       .nav-link {
-        color: @color;
-        font-weight: @bold;
-
-        span {
-          background-color: @color;
-          color: @dark;
-        }
+        background-color: @color;
+        color: @dark;
+        font-weight: bold;
+        margin-left: -2rem;
+        margin-right: -2.5rem;
+        padding-right: 2.5rem;
 
         &:hover {
-          span {
-            background-color: @dark;
-            color: @color;
-          }
+          background-color: @dark;
+          color: @color;
         }
       }
     }
